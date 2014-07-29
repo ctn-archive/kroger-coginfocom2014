@@ -31,7 +31,7 @@
   Neural Engineering Objects Framework NENGO2.0}
 
 \author{\IEEEauthorblockN{Bernd J. Kr\"{o}ger}
-\IEEEauthorblockA{Neurophoentics Group,\\
+\IEEEauthorblockA{Neurophonetics Group,\\
 Department for Phoniatrics, Pedaudiology,\\
 and Communication Disorders,\\
 Medical School, RWTH Aachen University, Germany\\
@@ -53,7 +53,7 @@ Email: \{tbekolay, celiasmith\}@uwaterloo.ca}}
   NENGO speech production model will be introduced and discussed in
   the second part of this paper. The first part focuses on an
   articulatory-acoustic model, generating acoustic speech signals on
-  the basis of articulatory geome­tries. A mall set of functional
+  the basis of articulatory geome­tries. A small set of functional
   articulatory control parameters is used in our approach. Motor
   planning is based here the concept of speech or vocal tract actions
   (Kr\"{o}ger et al. 2010, Cognitive Processing 11: 187-205). A
@@ -175,7 +175,7 @@ of \textit{offset time interval}.
   ~ & adduction & voiced speech sounds: [b, d, g, m, n, l] and all
   vowels\\
   pulmonic & pressure (resulting from movements of chest and diaphragm)
-  & One action per utterance; constant pressure;
+  & one action per utterance; constant pressure;
   degree of that pressure determines speech intensity of whole utterance
 \end{tabular}
 \end{table}
@@ -344,10 +344,11 @@ segments varies with respect to overall tube length (e.g. longer tract
 length and thus more tube segments in case of [u] in comparison to [i]
 or [a]), and because the reflection-type line analog cannot handle
 varying tube length easily, the vocal tract shape over time is
-calculated merely one time per glottal pulse (glottal period). The
+calculated merely one time per glottal pulse (glottal period) and thus
+constant for that time period. The
 resulting radiated sound signal (pulse response) is calculated over a
 time interval of two glottal periods (Figure~\ref{fig:signal}) and is
-overlayed pulse by pulse in time, in order to form the overall speech
+overlayed pulse by pulse in time, in order to form the resulting speech
 sound signal.
 
 \begin{figure}[!t]
