@@ -27,8 +27,8 @@
 % \hyphenation{op-tical net-works semi-conduc-tor}
 
 \begin{document}
-\title{Modeling speech production using the
-  Neural Engineering Objects Framework NENGO2.0}
+\title{Modeling speech production using\\
+  the Neural Engineering Framework}
 
 \author{\IEEEauthorblockN{Bernd J. Kr\"{o}ger}
 \IEEEauthorblockA{Neurophonetics Group,\\
@@ -46,22 +46,20 @@ Email: \{tbekolay, celiasmith\}@uwaterloo.ca}}
 
 \begin{abstract}
   A neurobiologically plausible model of speech production is
-  introduced here using the NENGO neural simulator
-  (\url{http://nengo.ca/}). It will be shown that this approach allows
+  introduced here using the Neural Engineering Framework (NEF).
+  It will be shown that this approach allows
   detailed modeling of temporal aspects of action selection and action
   execution in speech production. A preliminary architecture of our
-  NENGO speech production model will be introduced and discussed in
+  NEF speech production model will be introduced and discussed in
   the second part of this paper. The first part focuses on an
   articulatory-acoustic model, generating acoustic speech signals on
-  the basis of articulatory geome­tries. A small set of functional
+  the basis of articulatory geometries. A small set of functional
   articulatory control parameters is used in our approach. Motor
-  planning is based here the concept of speech or vocal tract actions
+  planning is based on the concept of speech or vocal tract actions
   (Kr\"{o}ger et al. 2010, Cognitive Processing 11: 187-205). A
   2D-geometrical model is used and the acoustic speech signal is
   calculated using a reflection-type line analog model.
 \end{abstract}
-
-% no keywords
 
 \IEEEpeerreviewmaketitle
 
@@ -377,13 +375,19 @@ sound signal.
 \label{fig:signal}
 \end{figure}
 
-\section{The NENGO environment}
+\section{The Neural Engineering Framework}
 
-A NENGO (Neural ENGineering Objects; see \url{http://nengo.ca/}) is a
-neural simulation environment capable of modeling for example visual
+The Neural Engineering Framework (NEF; \cite{eliasmith2003})
+provides three principles for \textit{representing} and
+\textit{transforming} information \textit{dynamically}
+using feedforward and recurrently connected networks
+of spiking neurons.
+Nengo is a neural simulation environment that uses the NEF
+to build large-scale brain models \cite{bekolay2014}.
+The NEF and Nengo have been used to create models of visual
 object recognition or copy drawing of manually drawn digits by
-performing visual perception, cognitive tasks, as well as motor tasks
-for controlling a two-joint arm \cite{eliasmith2012,eliasmith2013}.
+performing visual perception, cognitive tasks, and motor tasks
+like controlling a two-joint arm \cite{eliasmith2012,eliasmith2013}.
 These cognitive and sensorimotor tasks are performed on the basis of a
 complex brain model which comprises many networks representing
 cortical circuits, basal ganglia, thalamus, as well as peripheral
@@ -403,7 +407,7 @@ caretaker; see \cite{kroger2011}) as well as for adult speech
 processing (i.e. production and perception). In the next section of
 this paper, a preliminary architecture for speech processing is
 introduced. The third section of this paper describes two simulation
-experiments which highlight some key features of NENGO which are
+experiments which highlight some key features of the NEF which are
 important for speech processing: (1) simulation of syllable sequencing
 and (2) simulation of action selection and execution in a listening
 and articulatory reproduction task.
@@ -424,31 +428,31 @@ well as phonological representations) as well as phonetic (i.e.
 hypermodal sensorimotor) representations of syllables within the
 speech action repository
 \cite{kroger2012,kroger2011a,eckers2013,eckers2013a,kroger2010} can be
-represented in NENGO using the semantic pointer architecture (SPA, see
+represented in the NEF using the semantic pointer architecture (SPA, see
 \cite{eliasmith2013}, p. 77ff). The word ``semantic'' is not used in
-NENGO in a narrow linguistics sense. Thus, semantic pointers are not
+the SPA in a narrow linguistics sense. Thus, semantic pointers are not
 used exclusively to represent meanings of words, phrases or sentences
 but can represent motor states as well, e.g. motor state (motor plan)
 of a complete syllable or motor state (motor plan) of a
 target-directed hand-arm gesture, or can represent sensory states,
 e.g. auditory states of syllables, words or phrases, visual states,
-etc. Thus, a semantic pointer in NENGO can be used to describe
+etc. Thus, a semantic pointer in the SPA can be used to describe
 discrete cognitive processing units as well as sensory and/or motor
 states (e.g. phonetic states of syllables as are defined in SAR
 \cite{kroger2012,kroger2011a,eckers2013,eckers2013a,kroger2010}).
 
-An advantage of the NENGO framework is that it connects cognitive,
+An advantage of the SPA is that it connects cognitive,
 sensory, and motor sates. A comprehensive brain model including
-cognitive, sensory and motor modules, called SPAUN
+cognitive, sensory and motor modules, called Spaun
 (\cite{eliasmith2012} and \cite{eliasmith2013}, p. 247ff) has been
-developed based on NENGO. We believe that the motor system of SPAUN
+developed with the NEF and Nengo. We believe that the motor system of Spaun
 can be augmented by a speech motor component, i.e. by a speech
 articulator system, which can be implemented in parallel to the
 already existing manual motor component. A discussion of similarities
 and differences of controlling hand-arm motor system, articulator
 motor system and facial motor system (in face-to-face communication
 scenarios) is given in \cite{kroger2010}. Moreover the perceptual
-system within SPAUN can be augmented by an auditory perceptual system
+system within Spaun can be augmented by an auditory perceptual system
 in order to allow speech acquisition and speech perception. This
 auditory perceptual component can be implemented in parallel to the
 already existing visual perceptual component (see
@@ -457,11 +461,11 @@ Figure~\ref{fig:model}).
 \begin{figure}[!t]
 \centering
 \includegraphics[width=\columnwidth]{model}
-\caption{NENGO architecture for syllable and word processing.
+\caption{High-level NEF model architecture for syllable and word processing.
   ``commKnow'' and ``SAR'' represent a neural long-term knowledge
   (communicative knowledge like mental lexicon and syllable action
   repository). ``wMem'' represents the working memory, ``BG'' the
-  basal ganglia neural network, and ``Thal'' the thalamus neural
+  basal ganglia network, and ``Thal'' the thalamus
   network. Semantic pointers can be activated and processed in both
   state networks on the basis of audiovisual input (left state
   network: perceptual state network) or at the level of motor planning
@@ -469,7 +473,7 @@ Figure~\ref{fig:model}).
 \label{fig:model}
 \end{figure}
 
-One further advantage of SPAUN is the neurobiological representation
+One further advantage of Spaun is the neurobiological representation
 of the cortex-basal ganglia-thalamus-cortex loop in order to model
 action selection and control of perception-action tasks
 (\cite{eliasmith2013}, p. 163ff). We believe that the concepts
@@ -482,13 +486,15 @@ and auditory state of syllables as well as of simple (mono-syllablic)
 words, semantic as well as basic behavioral knowledge for face-to-face
 communication in speech acquisition scenarios is stored in the SAR
 (speech action repository) and commKnow (communicative knowledge)
-module in form of predefined (i.e. learned) semantic pointers (Figure
-4). Syllable state pointers (for example representing the syllables
+module in form of predefined (i.e. learned) semantic pointers
+(Figure~\ref{fig:model}).
+Syllable state pointers (for example representing the syllables
 ``ba'', ``ga'', ``ga'', ...) as well as semantic pointers of
 communication scenarios (for example representing actions like
 ``listen to a communication partner'', ``produce a syllable, word or
 phrase'', ...) can be activated at the level of the state networks
-(Figure 4), based on neural representations stored in long term memory
+(Figure~\ref{fig:model}),
+based on neural representations stored in long term memory
 and based on actual audiovisual input (for example from a
 communication partner / interlocutor). This information is processed
 in working memory as well as in the
@@ -500,23 +506,23 @@ The size of the network components depends on the tasks which need to
 be performed. In order to fulfill the tasks discussed in the next
 section (syllable sequencing in speech production and control of
 question-answering scenarios in speech communication), the size of
-each cortical state network is 3000 model neurons each, the size of
+each cortical state network is 3000 LIF neurons each, the size of
 the visual and auditory component as well as of the motor component is
-300 model neurons each. The size of the recurrent network representing
-the working memory is 1000 model neurons. The basal ganglia comprises
-5 subnetworks with 600 model neurons each (3000 model neurons in
+300 LIF neurons each. The size of the recurrent network representing
+the working memory is 1000 LIF neurons. The basal ganglia comprises
+5 subnetworks with 600 LIF neurons each (3000 neurons in
 total, see \cite{eliasmith2013}, p. 164ff). The thalamus is
-represented by a network of 750 model neurons (see
+represented by a network of 750 LIF neurons (see
 \cite{eliasmith2013}, p. 169ff).
 
 \section{Discussion and Further Work}
 
-First steps in the direction of using NENGO (\url{http://nengo.ca/})
+First steps in the direction of using the NEF, SPA, and Nengo
 in order to model speech acquisition and speech processing are
-described in this paper. The NENGO framework seems to be advantageous
+described in this paper. These tools are advantageous
 for modelling speech acquisition and speech processing because this
 approach includes modelling of time as well as internal neural noise
-generation due to use of LIF neurons in a natural and straight forward
+generation due to use of LIF neurons in a natural and straightforward
 way. This allows us to model aspects of speech acquisition and speech
 processing which are beyond the scope of other approaches. Especially
 aspects of face-to-face communication in speech acquisition due to
@@ -524,20 +530,20 @@ perception-action routing in the brain and specific aspects of speech
 disorders due to different degrees of internal neural noise excitation
 can now be investigated now in more detail.
 
-In addition a functional articulatory-acoustic model has been
+In addition, a functional articulatory-acoustic model has been
 introduced. This model is designed for modeling the learning processes
 for intra- and inter-speech action parameters, i.e. for fine-tuning of
 action targets, for action onset-, target-, and offset-interval
 lengths as well as for establishing the temporal relation between
 different speech actions, forming a syllable or word (cf. babbling and
 imitation training \cite{kroger2009,kroger2014}). Because these
-simulations demands the generation of an abundance of speech items,
+simulations demand the generation of an abundance of speech items,
 our model is designed for generating speech items nearly in real time.
 Integrating nasal tract and noise sources for the generation of nasals
 and fricatives respectively will be done in near future. A perceptual
 evaluation of speech items produced by our model will follow.
 
-\IEEEtriggeratref{5}
+\IEEEtriggeratref{6}
 
 \bibliographystyle{IEEEtran}
 \bibliography{kroger}
