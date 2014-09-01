@@ -2,7 +2,8 @@
 
 \usepackage{cite}
 \usepackage{url}
-
+\usepackage{tipa}
+\let\ipa\textipa
 \ifCLASSINFOpdf
   \usepackage[pdftex]{graphicx}
   \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
@@ -105,7 +106,8 @@ is evident that infants babble a multitude of
 \textit{gross vocal tract actions} in their first year,
 mainly leading to successions of
 vocal tract opening and closing actions,
-which can sound, for example, like [baba], [dada] or [gaga]
+which can sound, for example,
+like \ipa{[bAbA]}, \ipa{[dAdA]} or \ipa{[gAgA]}
 \cite{kroger2009,kroger2014}. Thus, we
 can start by separating vocal tract \textit{opening actions} and vocal
 tract \textit{closing actions}. Vocal tract opening actions can also
@@ -149,7 +151,7 @@ labial closing action or to an open vocal tract shape in the case of the
 vocalic action in ``palm''. This (partial) vocal tract target shape is
 held during the \textit{target time interval}
 (e.g. the lips are held closed during
-the target time interval of the [p] in ``palm'')
+the target time interval of the \ipa{[p]} in ``palm'')
 and released at the beginning of the \textit{offset time interval}.
 
 \begin{table}[!t]
@@ -164,25 +166,25 @@ and released at the beginning of the \textit{offset time interval}.
   type of action & spatial parameters & examples (after fine-tuning of
   actions)\\
   \hline
-  vocalic & high-low & high: [i, u, y]; low: [a]\\
-  ~ & back-front & back: [u]; front: [i, y]\\
-  ~ & spread-rounded & spread [i]; rounded: [u, y]\\
+  vocalic & high-low & high: \ipa{[i, u, y]}; low: \ipa{[A]}\\
+  ~ & back-front & back: \ipa{[u]}; front: \ipa{[i, y]}\\
+  ~ & spread-rounded & spread \ipa{[i]}; rounded: \ipa{[u, y]}\\
   \hline
-  consonantal & end-effector & lips: [b, p, f, m];
-  tongue tip: [d, t, s, n, l]; tongue dorsum: [k, g]\\
+  consonantal & end-effector & lips: \ipa{[b, p, f, m]};
+  tongue tip: \ipa{[d, t, s, n, l]}; tongue dorsum: \ipa{[k, g]}\\
   ~ & degree (type) of constriction &
-  full closure: [b, p, m, d, t, n, k, g] (plosives and nasals) \newline
-  near closure: [f, s, S] (fricatives) \newline
-  lateral closure: [l]\\
-  ~ & location of constriction & in case of tip: [s] in ``saw''
-  vs. [S] in ``show''\\
+  full closure: \ipa{[b, p, m, d, t, n, k, g]} (plosives and nasals) \newline
+  near closure: \ipa{[f, s, S]} (fricatives) \newline
+  lateral closure: \ipa{[l]}\\
+  ~ & location of constriction & in case of tip: \ipa{[s]} in ``saw''
+  vs. \ipa{[S]} in ``show''\\
   \hline
-  velopharyngeal & abduction & nasal speech sounds: [m, n]\\
+  velopharyngeal & abduction & nasal speech sounds: \ipa{[m, n]}\\
   ~ & adduction & non-nasal speech sounds (vowels, plosives, fricatives,
   ...)\\
   \hline
-  glottal & abduction & voiceless speech sounds: [p, t, k, f, s, S]\\
-  ~ & adduction & voiced speech sounds: [b, d, g, m, n, l] and all
+  glottal & abduction & voiceless speech sounds: \ipa{[p, t, k, f, s, S]}\\
+  ~ & adduction & voiced speech sounds: \ipa{[b, d, g, m, n, l]} and all
   vowels\\
   pulmonic & pressure (resulting from movements of chest and diaphragm)
   & one action per utterance; constant pressure;
@@ -193,7 +195,7 @@ and released at the beginning of the \textit{offset time interval}.
 \begin{figure}[!t]
 \centering
 \includegraphics[width=\columnwidth]{actions}
-\caption{Vocal tract action score of the word ``palm'' [pam]. Vocal
+\caption{Vocal tract action score of the word ``palm'' \ipa{[pAm]}. Vocal
   tract actions are ordered with respect to four tiers (vocalic,
   consonantal, velopharyngeal, and glottal). Temporal location of
   onset (lightgray), target (darkgray), and offset time intervals
@@ -203,8 +205,8 @@ and released at the beginning of the \textit{offset time interval}.
   abduction action; 5: glottal abduction action; 6: glottal adduction
   action. The offset time interval for action 5 overlaps with the
   onset time interval of action 6. Time scale (bottom) is in milliseconds.
-  Thus, actions 1 and 6 lead to [a], actions 2 and 5 lead to [p], and
-  actions 3, 4, and 6 lead to [m]. The temporal overlap of vocal tract
+  Thus, actions 1 and 6 lead to \ipa{[A]}, actions 2 and 5 lead to \ipa{[p]}, and
+  actions 3, 4, and 6 lead to \ipa{[m]}. The temporal overlap of vocal tract
   actions can also be called coarticulation.}
 \label{fig:actions}
 \end{figure}
@@ -216,20 +218,20 @@ Our set of articulatory control parameters is small but
 vocalic parameters (\textit{front-back}, \textit{high-low}, and
 \textit{spread-rounded}) control the overall shape of the vocal tract,
 as is needed for the production of all vowels. For example \textit{high-low} separates
-vowels like [i, y, u] vs. [a] (vocal tract shapes for these vowels are given in
+vowels like \ipa{[i, y, u]} vs. \ipa{[A]} (vocal tract shapes for these vowels are given in
 Figure~\ref{fig:sagi}, top row). The consonantal parameters (\textit{lip
   adduction}, \textit{tongue tip elevation}, \textit{tongue body
   elevation}) control \textit{degree (or type)} of consonantal
 constrictions (e.g. full-closure in case of plosives or nasals, near
 closure in case of fricatives, lateral closure in case of laterals).
 For example full-closures in case of parameter \textit{lip adduction}
-leads to production of [p, b, m], in case of parameter
-\textit{tongue tip elevation} to production of [d, t, n], and in case of
-parameter \textit{tongue body elevation} to production of [k, g]
+leads to production of \ipa{[p, b, m]}, in case of parameter
+\textit{tongue tip elevation} to production of \ipa{[d, t, n]}, and in case of
+parameter \textit{tongue body elevation} to production of \ipa{[k, g]}
 (see also Table~\ref{tab:actions}). Near closures in case of parameter
-\textit{lip adduction} leads to production of [f], in case of parameter
-\textit{tongue tip elevation} to production of [s, z, S, Z], and in case of
-parameter \textit{tongue body elevation} to production of [x].
+\textit{lip adduction} leads to production of \ipa{[f]}, in case of parameter
+\textit{tongue tip elevation} to production of \ipa{[s, z, S, Z]}, and in case of
+parameter \textit{tongue body elevation} to production of \ipa{[x]}.
 Thus, while vocalic parameters control the overall shape of vocal tract,
 consonantal parameters control only local parts
 of the vocal tract shape (e.g. the lip, tongue tip, or tongue
@@ -248,8 +250,8 @@ the lower lips, 23 points for the tongue,
 15 points for the hard palate, 34 points for the velum,
 and 23 points for the pharynx wall, larynx, and epiglottis.
 These 2D locations are obtained from static MRI scans
-for three contours representing the (extremal) cardinal vowels [i], [a],
-[u] (see \cite{kroger2005,kroger2004}). It is assumed that all vowel
+for three contours representing the (extremal) cardinal vowels \ipa{[i]}, \ipa{[A]},
+\ipa{[u]} (see \cite{kroger2005,kroger2004}). It is assumed that all vowel
 shapes can be generated by interpolating between these extremal contours
 using the three \textit{vocalic control parameters} introduced above.
 In addition, extremal contours are generated for maximal labial
@@ -263,22 +265,22 @@ In addition to the \textit{degree of constriction} (see above),
 one more parameter is needed for the
 tongue tip, which controls the \textit{place of articulation},
 in order to differentiate alveolar and postalveolar tongue tip
-constrictions (e.g. [s] vs. [S]; see Table~\ref{tab:actions}). The
+constrictions (e.g. \ipa{[s]} vs. \ipa{[S]}; see Table~\ref{tab:actions}). The
 exact location for tongue dorsum closure is controlled indirectly by
 the current value of the vocalic front-back parameter.
 
 \begin{figure*}[!t]
-\subfloat[{[a]}]{
+\subfloat[\ipa{[A]}]{
   \includegraphics[width=0.2\textwidth]{sagi1}
   \label{fig:sagi1}
 }
 \hfil
-\subfloat[{[i]}]{
+\subfloat[\ipa{[i]}]{
   \includegraphics[width=0.2\textwidth]{sagi2}
   \label{fig:sagi2}
 }
 \hfil
-\subfloat[{[u]}]{
+\subfloat[\ipa{[u]}]{
   \includegraphics[width=0.2\textwidth]{sagi3}
   \label{fig:sagi3}
 }
@@ -288,7 +290,7 @@ the current value of the vocalic front-back parameter.
   \label{fig:sagi4}
 } \vspace{-1em}
 
-\subfloat[area function for {[a]}]{
+\subfloat[area function for \ipa{[A]}]{
   \includegraphics[width=0.2\textwidth]{sagi5}
   \label{fig:sagi5}
 }
@@ -349,7 +351,7 @@ these lines are perpendicular to the midline and thus perpendicular to the
 airstream within the vocal tract tube (green lines in
 Figure~\ref{fig:sagi}). These distance lines are the basis for
 calculating the area function (an example of an area function is
-given in Figure~\ref{fig:sagi5}) for the vocal tract shape of [a]. (cf.
+given in Figure~\ref{fig:sagi5}) for the vocal tract shape of \ipa{[A]}. (cf.
 \cite{perrier1992}).
 
 \section{Modeling Vocal Tract Acoustics}
@@ -368,8 +370,8 @@ instant. Acoustic and aerodynamic loss mechanisms including losses due
 to sound radiation at mouth are included \cite{liljencrants1985}.
 Because the length of the vocal tract and thus the number of tube
 segments varies with respect to overall tube length (e.g. longer tract
-length and thus more tube segments in case of [u] in comparison to [i]
-or [a]), and because the reflection-type line analog cannot handle
+length and thus more tube segments in case of \ipa{[u]} in comparison to \ipa{[i]}
+or \ipa{[A]}), and because the reflection-type line analog cannot handle
 varying tube length easily, the vocal tract shape over time is
 evaluated only once per glottal pulse (glottal period) and is
 thus assumed to be constant for that time period. The
@@ -390,7 +392,7 @@ sound signal.
   \end{minipage}
   \caption{Left side: single glottal pulse (middle: glottal flow;
     bottom: its time derivative for exactly one glottal period) and
-    pulse answer for an [a], radiated from mouth (top). Right side
+    pulse answer for an \ipa{[A]}, radiated from mouth (top). Right side
     top: acoustic speech signal, resulting from overlayed pulse
     answers; middle: glottal flow waveshape for 9 glottal cycles;
     bottom: first time derivative of glottal flow. The Hanning window
@@ -587,7 +589,7 @@ and fricatives respectively are the next tasks to be completed.
 Then, we will conduct a study on the perceptual evaluation
 of speech items produced by our model.
 
-\IEEEtriggeratref{6}
+\IEEEtriggeratref{4}
 
 \bibliographystyle{IEEEtran}
 \bibliography{kroger}
