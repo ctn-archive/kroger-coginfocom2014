@@ -562,17 +562,17 @@ directly activates the phonemic representation of the syllable.
 This cortical state information forms the input signal for the
 basal ganglia-thalamus part of the network. This part of the
 network subsequently activates the premotor and auditory state
-of the syllable sequence (see Figure~\ref{fig:ipynb551_output}).
-It can be seen that due to the basal ganglia-thalamus loop,
-the activation of the premotor and auditory states are delayed by
-around 50 ms with respect to phonemic input.
+of the syllable sequence. It can be seen that due to the basal
+ganglia-thalamus loop, the activation of the premotor and auditory
+states are delayed by around 50 ms with respect to phonemic input
+(see Figure~\ref{fig:ipynb551_output}).
 
 \begin{figure}
 \centering
 \includegraphics[width=\columnwidth]{ipynb551_structure}
 \caption{Structure of the syllable sequencing network. ``bg''
   refers to the basal ganglia. The input semantic pointer is
-  represented by a network representing phonemic information.
+  represented by the phonemic state network.
   That semantic pointer is communicated to premotor and auditory
   networks through a basal ganglia-thalamus network. See text
   for more details.}
@@ -590,7 +590,7 @@ around 50 ms with respect to phonemic input.
   representation in the population and the target semantic pointer;
   the target semantic pointer is ``BA'' for the blue line,
   ``DA'' for the green line, ``GA'' for the red line,
-  and ``neutral'' (i.e., no speech) for the cyan line.
+  and ``NEUTRAL'' (i.e., no speech) for the cyan line.
   The shaded grey regions are 50 ms wide and show the delay
   between the phonemic and auditory/premotor representations.}
 \label{fig:ipynb551_output}
