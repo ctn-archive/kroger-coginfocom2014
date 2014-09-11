@@ -439,7 +439,7 @@ a preliminary architecture for speech production is introduced.
 \section{The architecture of the speech production model}
 
 A speech production model should be made up of a cognitive component
-(mental lexicon) as well as a sensorimotor component (speech action
+(mental lexicon and general communicative knowledge) as well as a sensorimotor component (speech action
 repository, SAR, and a production-perception loop; see
 \cite{kroger2009,kroger2014,kroger2012,kroger2011a,eckers2013,eckers2013a,kroger2010}).
 It is a key feature of our ongoing work on modeling speech production
@@ -496,14 +496,17 @@ the words corresponding to those digits.
 \centering
 \includegraphics[width=\columnwidth]{model}
 \caption{High-level NEF model architecture for syllable and word processing.
-  ``commKnow'' and ``SAR'' represent a neural long-term knowledge
-  (communicative knowledge like a mental lexicon, and syllable action
+  ``commKnow'', ``mental lexicon'' and ``SAR'' represent a neural long-term knowledge
+  (communicative knowledge, mental lexicon, and syllable action
   repository). ``wMem'' represents the working memory, ``BG'' the
   basal ganglia network, and ``Thal'' the thalamus
-  network. Semantic pointers can be activated and processed in both
-  state networks on the basis of audiovisual input (left state
-  network: perceptual state network) or at the level of motor planning
-  (right state network: action planning network; see also text).}
+  network. The working memory includes current high level sensory, cognitive, and
+  motor plan states (``sState, cState, mState''). High level sensory states can
+  be activated from sensory input (bottom-up) or from mental lexicon (top-down).
+  Cognitive states like phonemic representations of syllables may be activated
+  from visual input (e.g. reading letters) via BG-Thalamus and mental lexicon. Motor plans may
+  be activated from phonemic representations in working memory via BG-Thalamus
+  and SAR as well as a learned auditory states of the currently activated syllables.}
 \label{fig:model}
 \end{figure}
 
